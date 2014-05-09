@@ -1,0 +1,997 @@
+
+<link rel="stylesheet" type="text/css"  media="screen" href="/static/css/easydialog.css">
+<script src="/static/js/easydialog.js"></script>
+
+<div class="row">
+
+	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+		<h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-home"></i> Dashboard <span>> My Dashboard</span></h1>
+	</div>
+	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+		<ul id="sparks" class="">
+			<li class="sparks-info">
+				<h5> 已监控设备 <span class="txt-color-blue">7171台</span></h5>
+				<!--div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+					1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+				</div-->
+			</li>
+			<li class="sparks-info">
+				<h5> 在线主机 <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<!--div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+					110,150,300,130,400,240,220,310,220,300, 270, 210
+				</div-->
+			</li>
+			<li class="sparks-info">
+				<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+					110,150,300,130,400,240,220,310,220,300, 270, 210
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+<!-- row -->
+<div class="row">
+<article class="col-sm-12">
+	<!-- new widget -->
+	<div class="jarviswidget" id="wid-id-0" data-widget-togglebutton="false" data-widget-editbutton="false" data-widget-fullscreenbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+		<!-- widget options:
+		usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+		data-widget-colorbutton="false"
+		data-widget-editbutton="false"
+		data-widget-togglebutton="false"
+		data-widget-deletebutton="false"
+		data-widget-fullscreenbutton="false"
+		data-widget-custombutton="false"
+		data-widget-collapsed="true"
+		data-widget-sortable="false"
+
+		-->
+		<header>
+			<span class="widget-icon"> <i class="glyphicon glyphicon-stats txt-color-darken"></i> </span>
+			<h2>流量分析s</h2>
+
+			<ul class="nav nav-tabs pull-right in" id="myTab">
+				<li class="active">
+					<a data-toggle="tab" href="#s1"><i class="fa fa-clock-o"></i> <span class="hidden-mobile hidden-tablet">今日流量</span></a>
+				</li>			
+				<li >
+					<a data-toggle="tab" href="#s2"><i class="fa fa-clock-o"></i> <span class="hidden-mobile hidden-tablet">昨日流量</span></a>
+				</li>
+
+				<li>
+					<a data-toggle="tab" href="#s3"><i class="fa fa-facebook"></i> <span class="hidden-mobile hidden-tablet">TOP URL</span></a>
+				</li>
+
+
+			</ul>
+
+		</header>
+
+	<!-- widget div-->
+	<div class="no-padding">
+		<!-- widget edit box -->
+		<div class="jarviswidget-editbox">
+
+			test
+		</div>
+		<!-- end widget edit box -->
+
+		<div class="widget-body">
+			<!-- content -->
+			<div id="myTabContent" class="tab-content">
+			
+					<div class="tab-pane fade active" id="s1">
+
+						<div class="widget-body-toolbar bg-color-white smart-form" id="rev-toggles">
+
+							<p> TEST...........</p>
+							<div id="real_time_network_flow" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+						</div>
+
+					</div>
+					<!-- end s1 tab pane -->
+			
+				<div class="tab-pane fade  in padding-10 no-padding-bottom" id="s2">
+					<div class="row no-space">
+						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+
+							<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+							<!--div id="updating-chart" class="chart-large txt-color-blue"></div-->
+
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 "  id="squid_cache_type_container">
+
+						</div>
+					</div>
+
+					<div class="show-stat-microcharts">
+						<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+
+							<span class="easy-pie-title"> Total UV <i class="fa fa-caret-up icon-color-bad"></i> </span>
+
+							
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+							<span class="easy-pie-title"> Total PV <i class="fa fa-caret-down icon-color-good"></i></span>
+
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+							<span class="easy-pie-title"> Transfered <i class="fa fa-caret-up icon-color-good"></i></span>
+							
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+							<span class="easy-pie-title"> Temperature <i class="fa fa-caret-down icon-color-good"></i></span>
+							
+						</div>
+					</div>
+
+				
+				</div>
+				<!-- end s1 tab pane -->
+
+				<div class="tab-pane fade" id="s3">
+						<div class="widget-body-toolbar bg-color-white">
+
+							<form class="form-inline" role="form">
+
+								<div class="form-group">
+									<label class="sr-only" for="s123">Show From</label>
+									<input type="email" class="form-control input-sm" id="s123" placeholder="Show From">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control input-sm" id="s124" placeholder="To">
+								</div>
+
+								<div class="btn-group hidden-phone pull-right">
+									<a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i class="fa fa-cog"></i> More <span class="caret"> </span> </a>
+									<ul class="dropdown-menu pull-right">
+										<li>
+											<a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> Export to PDF</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);"><i class="fa fa-question-sign"></i> Help</a>
+										</li>
+									</ul>
+								</div>
+
+							</form>
+
+						</div>
+						<div class="padding-10">
+							<div id="statsChart" class="chart-large has-legend-unique"></div>
+						</div>
+
+					</div>
+					<!-- end s2 tab pane -->
+
+
+				</div>
+
+				<!-- end content -->
+			</div>
+
+		</div>
+		<!-- end widget div -->
+	</div>
+	<!-- end widget -->
+
+</article>
+</div>
+
+	<!-- end row -->
+
+	<!-- row -->
+
+
+
+
+<!-- end widget grid -->
+
+<div id="test">test data goes here.... </div> 
+
+<!----start area rank-->
+
+<!-- widget grid -->
+
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+					<h2>区域流量排名</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="row no-space">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div id="region_rank" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								
+								
+								<!--div id="updating-chart" class="chart-large txt-color-blue"></div-->
+
+							</div>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+		</article>
+		
+		<!--start pv graph -->
+				<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-2" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+					<h2>区域流量排名</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="row no-space">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div id="region_pv_rank" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								
+								
+								<!--div id="updating-chart" class="chart-large txt-color-blue"></div-->
+
+							</div>
+							
+						</div>
+					
+					
+					
+					
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+		</article>
+		<!--end pv graph-->
+		</div> <!--end row-->
+		<div class='row'>
+		<!--start smaller graph-->
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-3" data-widget-editbutton="false">
+
+				<header>
+					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+					<h2>TOP URL </h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body no-padding">
+						
+						
+						<div class="table-responsive">
+								
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>url</th>
+										<th>访问量(次数)</th>
+									</tr>
+								</thead>
+								<tbody>
+								{% for url in top_url %}
+									<tr>
+										<td>{{  forloop.counter}}</td>
+										<td>{{ url.0 }}</td>
+										<td>{{ url.1}} </td>
+
+									</tr>
+								{% endfor %}
+
+								</tbody>
+							</table>
+							
+						</div>
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+		<!-- NEW WIDGET START -->
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-4" data-widget-editbutton="false">
+				
+				<header>
+					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+					<h2>流量来源 </h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body no-padding">
+						
+
+						<div class="table-responsive">
+							<div id="browser_type">
+
+							
+						</div>
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- end smaller graph -->
+
+
+		
+		
+	</div>
+</section>
+<!--end area rank-->
+
+
+
+<script type="text/javascript">
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+	
+	/*
+	 * PAGE RELATED SCRIPTS
+	 */
+	
+	$(".js-status-update a").click(function () {
+	    var selText = $(this).text();
+	    var $this = $(this);
+	    $this.parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+	    $this.parents('.dropdown-menu').find('li').removeClass('active');
+	    $this.parent().addClass('active');
+	});
+	
+
+	//start customized js
+	//block ui
+		easyDialog.open({
+			container : {
+				content : ' 数据加载中...10s还完成不了代表我死了！'
+			},
+			
+			autoClose : 20000
+		});
+		//easyDialog.close();
+	//highchart
+		//customized get
+	  var xAxis_index = [];
+	  var total_sizes = [];
+	  var vistors = [];
+	  var cache_type_array = [];
+	  var region_name_array = [];
+	  var region_uv_count_array = [];
+	  var region_name_pv_array = [];
+	  var region_pv_count_array = [];
+	  var browser_type_array = [];
+	  $.get('/get_squid_data/', {name:"squid_summary_data"}).done(function(return_data ){
+		var obj = jQuery.parseJSON(return_data);
+		
+		$.each(obj,function(i,item){
+			if (i =='by_hour'){
+				$.each(item,function(hour,hour_value){
+					timeStamp = new Date(hour_value.hour_end_time*1000);
+					xAxis_index.push(timeStamp.getHours()+":"+timeStamp.getMinutes());
+					total_sizes.push(hour_value.total_size);
+					vistors.push(hour_value.vistors);
+				
+			
+				});
+
+			}//end if by_hour
+			else if(i == 'by_cache_type'){
+				$.each(item, function(type_name,cache_type_count){
+					cache_type_array.push([type_name,cache_type_count]);
+				});
+				//$("#test").append(cache_type_array);
+			}//end by_cache_type
+			else if(i== 'by_region'){
+				$.each(item, function(region, uv_count){
+					region_name_array.push(region);
+					region_uv_count_array.push(uv_count);
+					//console.log(region,uv_count);
+				});
+			}//end by region	
+			else if(i== 'by_region_pv'){
+				
+				$.each(item, function(region, pv_count){
+					region_name_pv_array.push(region);
+					region_pv_count_array.push(pv_count);
+					//console.log(region,pv_count);
+				});
+			}//end by region		
+			else if(i=='by_browser_type'){
+				$.each(item, function(device_name,data_count){
+					browser_type_array.push([device_name,data_count]);
+				});
+			}//end by browser_type
+			//document.write(timeStamp.getHours()+":"+timeStamp.getMinutes());
+		});
+		
+		
+	  });//end customized get
+	//start real_time_network_flow
+	$(function () {
+        $('#real_time_network_flow2').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'SQUID 实时流量'
+            },
+            subtitle: {
+                text: 'Source:自动化组'
+            },
+            xAxis: {
+				categories: [1,2,3,4,5,6,7,7,8,4,3,4,5,3],
+                //allowDecimals: false,
+                /*labels: {
+                    formatter: function() {
+                        return this.value; // clean, unformatted number for year
+                    }
+                }*/
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                /*labels: {
+                    formatter: function() {
+                        return this.value / 1000 +'k';
+                    }
+                }*/
+            },
+			exporting: {
+				enabled: false
+				},
+			credits: {
+				enabled: false
+				},			
+            tooltip: {
+                pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+            },
+            plotOptions: {
+                area: {
+					fillColor: {
+                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1},
+                        stops: [
+                            [0, Highcharts.getOptions().colors[9]],
+                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                        ],
+						
+                    },
+                   // pointStart: 1940,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true,
+								
+                            }
+                        }
+                    }
+                }
+            },
+            series: [ {
+                name: 'USSR/Russia',
+                data: [null, null, null, null, null, null, null , null , null ,null,
+                5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+               
+                21000, 20000, 19000, 18000, 18000, 17000, 16000]
+            }]
+        });
+    });
+    
+	//end real_time_network_flow
+	//start real time data
+$(function () {
+    $(document).ready(function() {
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });
+    
+        var chart;
+        $('#real_time_network_flow').highcharts({
+            chart: {
+                type: 'area',
+                animation: Highcharts.svg, // don't animate in old IE
+                marginRight: 10,
+                events: {
+                    load: function() {
+    
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(function() {
+                            var x = (new Date()).getTime(), // current time
+                                y = Math.random();
+                            series.addPoint([x, y], true, true);
+                        }, 10000);
+                    }
+                }
+            },
+            title: {
+                text: 'SQUID 实时总流量'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+			plotOptions: {
+                area: {
+					fillColor: {
+                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1},
+                        stops: [
+                            [0, Highcharts.getOptions().colors[9]],
+                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                        ],
+						
+                    },
+					color:'#f27d2f',
+					fillOpacity:0.8,
+                   // pointStart: 1940,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true,
+								
+                            }
+                        }
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+			credits: {
+					 
+				enabled: false
+			},
+            series: [{
+                name: '实时流量',
+                data: (function() {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+
+                    for (i = -19; i <= 0; i++) {
+                        data.push({
+                            x: time + i * 100000,
+							
+                            y: Math.random()
+                        });
+                    }
+                    return data;
+                })()
+            }]
+        });
+    });
+    
+});
+	//end real time data
+	  
+	  
+	 var auto_refresh = setInterval(
+        function (){
+            if(total_sizes.length <1){ //24hours
+				console.log('loading.....'+ total_sizes.length);
+			}else{
+				//alert('loading success....');
+				clearInterval(auto_refresh);
+				easyDialog.close();
+				
+				//alert(total_sizes);
+				$(function () {
+					$('#container').highcharts({
+					chart: {
+						type: 'column'
+					},
+					title: {
+						text: 'SQUID总流量概览'
+					},
+					subtitle: {
+						text: 'Source: 自动化组'
+					},
+					xAxis: {
+						categories: xAxis_index
+
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: '访问量 '
+						}
+					},
+					exporting: {
+						enabled: false
+					},
+					 credits: {
+					 
+						  enabled: false
+					 },
+					tooltip: {
+						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+							'<td style="padding:0"><b>{point.y:.1f} </b></td> </tr>',
+						footerFormat: '</table>',
+						shared: true,
+						useHTML: true
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						}
+					},
+					series: [{
+						name: '流量(Byte)',
+						data: total_sizes
+			
+					}, {
+						name: '用户量',
+						data: vistors
+			
+					}],
+
+				});
+
+				}); //流量统计结束
+				//start pie squid cache type graph
+				$(function () {
+				$('#squid_cache_type_container').highcharts({
+					chart: {
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false
+					},
+					title: {
+						text: 'SQUID Cache Type'
+					},
+					tooltip: {
+						pointFormat: '{series.name}: <b>{point.y:.1f}</b>'
+					},
+					exporting: {
+						enabled: false
+					},
+					 credits: {
+						  enabled: false
+					 },
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+								style: {
+									color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+								}
+							}
+						}
+					},
+					series: [{
+						type: 'pie',
+						name: 'Browser share',
+						data: cache_type_array,
+					}]
+				});
+				}); //end squid_cache_type_container
+				//start region rank graph
+
+			$(function () {
+					$('#region_rank').highcharts({
+					chart: {
+						type: 'column'
+					},
+					title: {
+						text: 'TOP区域UV'
+					},
+					subtitle: {
+						text: 'Source: 自动化组'
+					},
+					xAxis: {
+						categories: region_name_array
+
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: '访问量 '
+						}
+					},
+					exporting: {
+						enabled: false
+					},
+					colors: ['#8bbc21'],
+					
+					 credits: {
+					 
+						  enabled: false
+					 },
+					tooltip: {
+						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+							'<td style="padding:0"><b>{point.y:.1f} </b> </td> </tr>',
+						footerFormat: '</table>',
+						shared: true,
+						useHTML: true
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						},
+						series: {
+							stacking: 'normal'
+						},
+						dataLabels:{
+										enabled:true,
+										formatter:function() {
+											var pcnt = (this.y / 400000) * 100;
+											return Highcharts.numberFormat(pcnt) + '%';
+										}
+									},
+					},
+					series: [ {
+						name: 'UV',
+						data: region_uv_count_array
+					}],
+
+				});
+
+				}); 
+    
+				//end region rank 
+				
+				//start region pv rank
+				$(function () {
+					$('#region_pv_rank').highcharts({
+					chart: {
+						type: 'column'
+					},
+					title: {
+						text: 'TOP区域PV'
+					},
+					subtitle: {
+						text: 'Source: 自动化组'
+					},
+					xAxis: {
+						categories: region_name_pv_array
+
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: '访问量 '
+						}
+					},
+					exporting: {
+						enabled: false
+					},
+					colors: ['#910000'],
+					
+					 credits: {
+					 
+						  enabled: false
+					 },
+					tooltip: {
+						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+							'<td style="padding:0"><b>{point.y:.1f} </b></td> </tr>',
+						footerFormat: '</table>',
+						shared: true,
+						useHTML: true
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						}
+					},
+					series: [ {
+						name: 'PV(page visit)',
+						data: region_pv_count_array
+			
+					}],
+
+				});
+
+				}); 
+				//end region pv rank
+				
+				//start pie browser type 
+				$(function () {
+				$('#browser_type').highcharts({
+					chart: {
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false
+					},
+					title: {
+						text: '访问来源'
+					},
+					tooltip: {
+						pointFormat: '{series.name}: <b>{point.y:.1f}</b>'
+					},
+					exporting: {
+						enabled: false
+					},
+					 credits: {
+						  enabled: false
+					 },
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+								style: {
+									color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+								}
+							}
+						}
+					},
+					series: [{
+						type: 'pie',
+						name: 'Browser share',
+						data: browser_type_array,
+					}]
+				});
+				}); 
+				//end pip browser type
+				
+			};//end else
+        },2000);
+
+
+
+</script>
