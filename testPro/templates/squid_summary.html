@@ -484,6 +484,8 @@
 	  var region_name_pv_array = [];
 	  var region_pv_count_array = [];
 	  var browser_type_array = [];
+	  var total_uv = '';
+	  var total_pv = '';
 	  $.get('/get_squid_data/', {name:"squid_summary_data"}).done(function(return_data ){
 		var obj = jQuery.parseJSON(return_data);
 		
@@ -525,6 +527,14 @@
 					browser_type_array.push([device_name,data_count]);
 				});
 			}//end by browser_type
+			else if (i=='total_pv'){
+				total_pv = obj[i]; 
+				console.log(total_pv);
+			}
+			else if (i=='total_uv'){
+				total_uv = obj[i];
+				console.log(total_uv);
+			}
 			//document.write(timeStamp.getHours()+":"+timeStamp.getMinutes());
 		});
 		
@@ -735,7 +745,7 @@ $(function () {
 						type: 'column'
 					},
 					title: {
-						text: 'SQUID总流量概览'
+						text: 'SQUID 昨日流量概览'
 					},
 					subtitle: {
 						text: 'Source: 自动化组'
@@ -760,7 +770,7 @@ $(function () {
 					tooltip: {
 						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
 						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-							'<td style="padding:0"><b>{point.y:.1f} </b></td> </tr>',
+							'<td style="padding:0"><b>{point.y:.0f} </b></td> </tr>',
 						footerFormat: '</table>',
 						shared: true,
 						useHTML: true
@@ -796,7 +806,7 @@ $(function () {
 						text: 'SQUID Cache Type'
 					},
 					tooltip: {
-						pointFormat: '{series.name}: <b>{point.y:.1f}</b>'
+						pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
 					},
 					exporting: {
 						enabled: false
@@ -825,7 +835,6 @@ $(function () {
 				});
 				}); //end squid_cache_type_container
 				//start region rank graph
-
 			$(function () {
 					$('#region_rank').highcharts({
 					chart: {
@@ -859,30 +868,45 @@ $(function () {
 					tooltip: {
 						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
 						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-							'<td style="padding:0"><b>{point.y:.1f} </b> </td> </tr>',
+							'<td style="padding:0"><b>{point.y:.0f} </b> </td> </tr>',
 						footerFormat: '</table>',
 						shared: true,
 						useHTML: true
 					},
 					plotOptions: {
+						
 						column: {
 							pointPadding: 0.2,
-							borderWidth: 0
+							borderWidth: 0,
+							dataLabels: {
+									formatter: function() {
+										return (this.point.y/total_uv *100).toFixed(2) + '%';
+									}
+							}
 						},
 						series: {
 							stacking: 'normal'
 						},
-						dataLabels:{
-										enabled:true,
-										formatter:function() {
-											var pcnt = (this.y / 400000) * 100;
-											return Highcharts.numberFormat(pcnt) + '%';
-										}
-									},
+
 					},
+
 					series: [ {
 						name: 'UV',
-						data: region_uv_count_array
+						data: region_uv_count_array,
+						//customized
+						dataLabels: {
+							enabled: true,
+							rotation: -40,
+							color: 'brown',
+							align: 'left',
+							x: -8,
+							//y: 10,
+							style: {
+								fontSize: '10px',
+								fontFamily: 'Verdana, sans-serif',
+								//textShadow: '0 0 1px black'
+							}
+						},// customized
 					}],
 
 				});
@@ -925,7 +949,7 @@ $(function () {
 					tooltip: {
 						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
 						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-							'<td style="padding:0"><b>{point.y:.1f} </b></td> </tr>',
+							'<td style="padding:0"><b>{point.y:.0f} </b></td> </tr>',
 						footerFormat: '</table>',
 						shared: true,
 						useHTML: true
@@ -933,12 +957,32 @@ $(function () {
 					plotOptions: {
 						column: {
 							pointPadding: 0.2,
-							borderWidth: 0
-						}
+							borderWidth: 0,
+							dataLabels: {
+									formatter: function() {
+										return (this.point.y/total_pv *100).toFixed(2) + '%';
+									}
+							}
+						},					
+
 					},
 					series: [ {
 						name: 'PV(page visit)',
-						data: region_pv_count_array
+						data: region_pv_count_array,
+						//customized
+						dataLabels: {
+							enabled: true,
+							rotation: -40,
+							color: 'brown',
+							align: 'left',
+							x: -8,
+							//y: 10,
+							style: {
+								fontSize: '10px',
+								fontFamily: 'Verdana, sans-serif',
+								//textShadow: '0 0 1px black'
+							}
+						},// customized
 			
 					}],
 
@@ -959,7 +1003,7 @@ $(function () {
 						text: '访问来源'
 					},
 					tooltip: {
-						pointFormat: '{series.name}: <b>{point.y:.1f}</b>'
+						pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
 					},
 					exporting: {
 						enabled: false

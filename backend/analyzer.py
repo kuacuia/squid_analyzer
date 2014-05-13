@@ -3,7 +3,7 @@ import eventlet
 from  get_ip_source import *
 import redis_connector as redis
 
-logfile = 'squid_access.log'
+logfile = '/usr/local/squid/var/logs/squid_access.log'
 #logfile = 'log25w.log'
 
 column_time = [ ]  # each hour as key
